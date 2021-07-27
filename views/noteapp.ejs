@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+
+    <div class="header">
+        <div class="left_header">
+            NOTEAPP CLONE
+        </div>
+        <div class="right_header">
+            <a href="/logout">Log out</a> 
+        </div>
+    </div>
+
+
+
+
+
+    <form action="/post" method="POST">
+        <textarea type="" name="noteText" id="" placeholder="Type Your Note Here"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+    <% notes.forEach(function(note){ %>
+        <div class="note">
+            <p><%- note.note %></p>
+            
+        <a class="delete" href="delete/<%- note._id %>">Delete</a>
+        </div>
+   <% }); %>
+    
+       
+    
+</body>
+</html>
